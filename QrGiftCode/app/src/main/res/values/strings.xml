@@ -14,5 +14,7 @@
     <string name="consultar">Consultar Saldo</string>
     <string name="ventas">Mis Ventas</string>
     <string name="soporte">Soporte Tecnico</string>
+    <string name="sape">Sape!</string>
+    <string name="monto">Ingresa el Monto a Redimir</string>
 
 </resources>

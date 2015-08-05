@@ -9,10 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ActionButtonsDialog.DialogListener {
 
     private Button btn_redimir;
+    private EditText editText;
+    private String monto;
+
+    private static final String TAG = "dialog";
+
+    public void showTwoActionButton() {
+        DialogFragment dialog = new ActionButtonsDialog();
+        dialog.show(getSupportFragmentManager(), TAG);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         btn_redimir = (Button) findViewById(R.id.btn_redimir);
         btn_redimir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment dialog = new ActionButtonsDialog();
-                dialog.show(getSupportFragmentManager(), "dialog");
+                showTwoActionButton();
             }
         });
     }
@@ -52,5 +63,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String string) {
+        monto = string;
+        Toast.makeText(getApplicationContext(),  monto,  Toast.LENGTH_LONG ).show();
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        Toast.makeText(getApplicationContext(), "iorngibgeorer cancelado ", Toast.LENGTH_SHORT)
+                .show();
     }
 }
