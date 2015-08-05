@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">giftcode Pos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="pos">pos</string>
+    <string name="user">Ingresa tu usuario</string>
+    <string name="pass">Ingresa tu contraseña</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="redimir">Redimir Bono</string>
+    <string name="consultar">Consultar Saldo</string>
+    <string name="ventas">Mis Ventas</string>
+    <string name="soporte">Soporte Tecnico</string>
+
+</resources>

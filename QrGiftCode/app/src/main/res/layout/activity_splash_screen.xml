@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_light_green_600"
+    tools:context="code.gift.qr.kenny.qrgiftcode.SplashScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_blanco"/>
+
+    <TextView
+        android:text="@string/pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="169dp"
+        android:textColor="@color/md_white_1000"
+        android:textIsSelectable="true"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
